@@ -1,0 +1,152 @@
+--------------------------Collection interface----------------------------------------
+
+important methods
+1)boolean add(Object obj)
+
+2)boolean addAll(Collection c) 
+
+3)boolean contains(Object obj)                    //Collections.sort uses merge sort                      
+                                                     //Array.sort uses quick sort       
+4)boolean containsAll(Collection c)
+
+5)Object[ ] toArray( ) 
+
+6)int size( )
+
+7)boolean remove(Object obj)
+
+8)Iterator iterator( )
+
+9)boolean isEmpty( )
+
+10)void clear( )
+
+11)boolean equals(Object obj)
+
+
+----------------------------List--------------------------------------------//extends Collections
+
+new method
+
+1)void add(int index, Object element) 
+
+2)Object get(int index)
+
+3)int indexOf(Object o)
+
+4)List subList(int start, int end) 
+
+
+two types ->LinkedList Class/* Implements a linked list by extending AbstractSequentialList
+                               which Extends AbstractList for use by a collection 
+                               AbstractList Extends AbstractCollection and implements most 
+                                    of the List Interface.
+                                it isuse by a collection that
+                                uses sequential rather than random access of its elements. 
+
+          ->ArrayList Class// implements Implements a dynamic array by extending AbstractList.
+
+----------------------------Map--------------------------------------------//extends Collections
+
+new method
+
+1) boolean containsKey(Object k) 
+
+2)boolean containsValue(Object v)
+
+3)Object put(Object k, Object v)
+
+4)Set entrySet( )
+  
+Returns a Set that contains the entries in the map. The set contains objects
+ of type Map.Entry. This method provides a set-view of the invoking map.
+
+5)Object get(Object k)
+
+6)void putAll(Map m) Puts all the entries from m into this map. 
+
+7)Object remove(Object k) Removes the entry whose key equals k.
+
+
+
+Maps classes
+
+1)HashMap
+2)LinkedHashMap
+3)TreeMap
+4)WeakHashMap
+5)IdentityHashMap
+
+
+
+---------------------The Map.Entry Interface------------
+
+boolean equals(Object obj) 
+Returns true if obj is a Map.Entry whose key and value are equal to that of the invoking object. 
+ 
+Object getKey( ) Returns the key for this map entry. 
+
+Object getValue( ) Returns the value for this map entry. 
+ 
+int hashCode( ) Returns the hash code for this map entry. 
+
+
+Object setValue(Object v)  
+Sets the value for this map entry to v. A ClassCastException is thrown if v is not 
+the correct type for the map. A NullPointerException is thrown if v is null and 
+the map does not permit null keys. An UnsupportedOperationException is thrown 
+if the map cannot be changed. 
+
+
+
+---------------------SortedMap------------------------------//extends Map
+all methods of map and
+
+Comparator comparator( )
+
+//remember to define comparator in all sorted collections
+
+
+
+
+
+--------------------------------------Set------------------------------//extends Collection
+
+methods of collection 
+
+
+Set classes
+
+1)HashSet
+
+A hash table stores information by using a mechanism called hashing. In hashing,
+ the informational content of a key is used to determine a unique value, called 
+its hash code. The hash code is then used as the index at which the data associated 
+with the key is stored. The transformation of the key into its hash code is performed 
+automatically. 
+
+2)The LinkedHashSet Class 
+
+This class extends HashSet, but adds no members of its own. 
+LinkedHashSet maintains a linked list of the entries in the set, in the order in
+ which they were inserted. This allows insertion-order iteration over the set. 
+That is, when cycling through a LinkedHashSet using an iterator, the elements will 
+be returned in the order in which they were inserted. 
+The hash code is then used as the index at which the data associated with the key
+ is stored. The transformation of the key into its hash code is performed automatically.
+
+
+The TreeSet Class
+ 
+TreeSet provides an implementation of the Set interface that uses a tree for storage. 
+Objects are stored in a sorted and ascending order. 
+Access and retrieval times are quite fast, which makes TreeSet an excellent choice when
+ storing large amounts of sorted information that must be found quickly.
+
+------------------------------------SortedSet-------------------------//extends Set
+
+All methods of set and
+
+1)Comparator comparator( )
+
+2)SortedSet subSet(Object start, Object end) 

@@ -1,0 +1,51 @@
+*class and interface can only be declared package private or public
+Only inner classes can declared with any access modifier
+
+*methods and fields in an interface cannot be declared protected
+
+*fields and methods in an interface are by default public
+
+*all fields in an interface are implicitly public static final
+
+*package private classes cannot be imported outside the packages
+
+*protected in java is different from c++ as in java the protected member can be 
+ accessed anywhere in the package through object. 
+
+*protected and package private are kind of similar 
+protected just exposes the member to the subclasses outside package
+
+*only public classes can be imported outside the packages.
+
+*package private data members can be inherited only inside the package that is 
+ inside package they act as public and outside package they act as private
+
+* The subclass does not inherit the private data members of the super class but
+  the object of the sub class does contain the private data members of the super
+    class.
+
+*Public = accessible through object,inheritable
+ 
+*protected = not accessible through object outside the package,inheritable
+
+*private = not accessible through object,not inheritable
+
+*protected data member in super class can be made public in inherited class
+
+*private data member is not inheritable so it cannot be changed to public or
+ protected in extended class
+
+*
+1) When we initialize a super class object
+ with a base class instance then all the data members that are mutually present in both
+both the super class and base class will be implemented through the object .
+
+2)the return type of the implementable data members will be their corresponding return
+types in the class which is the data type of the object(here super class)
+
+3) The data members present in derived class but not in super class
+    will not be implemented through this object.
+
+*public cannot be overridden in derived class as protected 
+all other conversion are possible as the new data memeber hides the implementation 
+of the old method

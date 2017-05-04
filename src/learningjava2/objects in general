@@ -1,0 +1,10 @@
+if you assign the value of one object to another and then change the value of the first object
+then the value of the the second object is also changed because object 2 is assigned the reference of object
+one in o2=o1
+
+
+java is pass by value
+
+
+Always remember only objects are passed by reference 
+primitive data type are passed by value

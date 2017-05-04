@@ -1,0 +1,19 @@
+*a>>2 = value of a is shifted towards right 2 times without digits 
+on the left getting replaced ,they only get reduced
+
+*a<<2 = value of a is shifted towards left 2 times with digits 
+on the left getting replaced with 0;
+
+*people say a>>>2 = value of a is shifted towards right 2 times with digits 
+on the left getting replaced with 0;
+
+*to store an octal value of a number in int use 
+int a=016 //0 is important
+
+*to store hexadecimal value of a number in integer use
+eg
+int a=0x56// ox is important
+
+*a>>=2 means a=a>>2;
+similarly others also
+

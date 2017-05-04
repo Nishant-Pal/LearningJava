@@ -1,0 +1,28 @@
+
+binary
+--
+
+FileInputStream,FileOutputStream
+
+
+character Streams
+--
+
+FileReader,FileWriter
+
+Standard Streams
+--
+
+System.in
+
+System.out
+
+System.err
+
+these may be used 'independently or using InputStreamReader,OutputStreamReader
+
+
+Note::
+
+While reading any type of file 
+catch EOFException to conclude the end of the file

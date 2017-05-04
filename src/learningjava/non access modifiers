@@ -1,0 +1,66 @@
+The non access modifiers are
+
+-static
+-final
+-abstract
+-Synchronized
+-transient
+-volatile
+                               ---static---
+*this and super cannot use static members
+*this and super cannot be used in static methods
+*not inherited
+
+
+
+                                ---final---
+*final data members cannot be modified
+*final variables are constants
+*final methods cannot be overridden
+*final classes cannot be inherited
+*abstract classes/methods cannot be declared as final
+and so interface which is a pure abstract class cannot
+be declared final.
+
+                                ---abstract---
+*Abstract class can contain both abstract methods and normal methods
+* class containing abstract methods should be declared as abstract 
+    otherwise compile error will occur
+*objects of abstract class can be created but the abstract classes cannot be instantiated.
+
+                                ---synchronized---
+*The synchronized keyword used to indicate that a method can be accessed by only one thread at a time
+
+                                ---transient---
+* when a class is marked serializable,transient is used to mark those fields whose persistant states
+   should not be transfered
+
+for eg a class has a method factorial and a number and a result field.
+if the class is serialized there is no need for the persistant state of
+ result field to be transferred as it can be calculated at the destination.
+So we mark result field as transient
+
+                                ---volatile---
+*volatile can be applied to variables which are private or are of type object.
+
+*The volatile modifier is used to let the JVM know that a thread accessing the variable must always
+ merge its own private copy of the variable with the master copy in the memory. 
+Accessing a volatile variable synchronizes all the cached copied of the variables
+ in the main memory. A volatile object reference can be null. 
+Java  
+43  
+Example 
+public class MyRunnable implements Runnable{ 
+    private volatile boolean active; 
+     public void run(){ 
+        active = true; 
+        while (active){ // line 1 
+            // some code here 
+        } 
+    }     
+    public void stop(){ 
+        active = false; // line 2 
+    } } 
+Usually, run() is called in one thread (the one you start using the Runnable), and stop() is 
+called from another thread. If in line 1, the cached value of active is used, the loop may not
+stop when you set active to false in line 2. That's when you want to use volatile. 

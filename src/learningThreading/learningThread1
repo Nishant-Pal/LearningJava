@@ -1,0 +1,28 @@
+
+constructors cannot be synchronized
+
+*synchronized methods eg public syncronized void help();
+
+
+*Synchronized Statements
+
+Another way to create synchronized code is with synchronized statements. Unlike synchronized methods, synchronized statements must specify the object that provides the intrinsic lock:
+
+public void addName(String name) {
+    synchronized(this) {
+        lastName = name;
+        nameCount++;
+    }
+    nameList.add(name);
+}
+
+*to make the changes made to a field appear to all the fields make that field volatile.
+
+*to use wait and notify methods of an object you have to acquire a lock
+    on that objects monitor through synchronized
+
+eg      synchronized(object);
+
+after this u can use wait and notify methods of object
+
+eg object.wait object.notify

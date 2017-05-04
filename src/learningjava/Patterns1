@@ -1,0 +1,95 @@
+*. for any single character except newline
+
+*\\d for digit \\D for non digit
+
+*\\s for any whitespace character \\S for any non space character
+
+*\\w for any word character word intcludes 0-9 ,a-z,A-Z,_  \\W for any non word
+
+*^123 for beginning with 123    123$ for ending with 123
+
+*The character class [ ] matches only one out of several characters placed inside the square brackets.
+eg
+
+[aeiou] is a vowel=a is a vowel/e is a vowel
+
+*The negated character class [^] matches any character that is not in the square brackets.
+eg.
+
+      [^aeiou] is not a vowel=g is not a vowel/ f is not a vowel 
+
+*In the context of a regular expression (RegEx), a character class is a set of characters enclosed within square brackets that allows you to match one character in the set.
+
+A hyphen (-) inside a character class specifies a range of characters where the left and right operands are the respective lower and upper bounds of the range. For example:
+
+ [0-9]is the same as[0123456789] .
+[a-z] is the same as[abcdefghijklmnopqrstuvwxyz]  .
+[A-Z] is the same as[ABCDEFGHIJKLMNOPQRSTUVWXYZ] .
+
+
+*The tool {x} will match exactly x repetitions of character/character class/groups.
+        
+\w{4}=H_ck
+
+w{3} : It will match the character w exactly  times. 
+[xyz]{5} : It will match the string of length  consisting of characters {x, y, z}.
+           For example it will match xxxxx, xxxyy and xyxyz. 
+\d{4} : It will match any digit exactly 4 times.
+
+*The {x,y} tool will match between x and y (both inclusive) repetitions of character/character class/group.
+w{3,5} : It will match the character w ,3,4  or 5  times. 
+[xyz]{5,} : It will match the character x, y or z 5 or more times. 
+\d{1, 4} : It will match any digits 1,2 ,3  or 4 times.
+
+
+
+
+*The * tool will match zero or more repetitions of character/character class/group.
+
+w* : It will match the character w 0 or more times. 
+[xyz]* : It will match the characters x, y or z 0 or more times. 
+\d* : It will match any digit 0 or more times.
+
+
+
+*The + tool will match one or more repetitions of character/character class/group.
+
+w+ : It will match the character w 1 or more times. 
+[xyz]+ : It will match the characters x, y or z 1 or more times. 
+\d+ : It will match any digit 1 or more times.
+
+\\brown\\b will  not detect in this sitution eg  Colour is bbbbrown of
+where as normal brown will detect in this example
+
+*Parenthesis ( ) around a regular expression can group that part of regex together.
+ This allows us to apply different quantifiers to that group.
+
+*This tool (\\number references the first capturing group) matches the same text as 
+ previously matched by the capturing group.
+
+(\\w)(\\w)(\\w)(\\w)\\1\\2\\3\\4
+
+accepts->malayalam
+
+*? is for optional match eg (\\d?)\\D it will match ww and 3w too
+
+* regex_1(?=regex_2)
+  The positive lookahead (?=) asserts regex_1 to be immediately followed by regex_2. 
+  The lookahead is excluded from the match. It does not return matches of regex_2.
+  The lookahead only asserts whether a match is possible or not.
+
+eg c(?=0) accepts chocolate
+
+*The negative lookahead (?!) asserts regex_1 not to be immediately followed by regex_2. Lookahead is 
+excluded from the match (do not consume matches of regex_2), but only assert 
+whether a match is possible or not.e(?!o)
+
+*The positive lookbehind (?<=) asserts regex_1 to be immediately preceded by regex_2. Lookbehind is 
+excluded from the match (do not consume matches of regex_2), but only assert whether a match is possible or not.
+
+eg (?<=regex_2)regex_1
+
+*The negative lookbehind (?<!) asserts regex_1 not to be immediately preceded by regex_2. Lookbehind is excluded 
+from the match (do not consume matches of regex_2), but only assert whether a match is possible or not.
+
+(?<!regex_2)regex_1

@@ -1,0 +1,13 @@
+Whenever sensitive data is to be returned by function such as an object or variable;
+
+return a copy of that data and not the actual data
+
+eg
+public void Box()
+{       //do not do this
+        return v; // v is object of Box class
+//do this
+        return new Box(v);
+}
+    
+    

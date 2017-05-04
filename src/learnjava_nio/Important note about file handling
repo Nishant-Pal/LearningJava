@@ -1,0 +1,4 @@
+remember always send only one path object refering to a file
+otherwise delete operation will not occur as file will be used by some other 
+Path object
+

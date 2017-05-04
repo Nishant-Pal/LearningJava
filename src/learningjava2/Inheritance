@@ -1,0 +1,27 @@
+SuperClass s=new SubClass()
+
+here s is a reference variable whose data type cannot be changed
+it can be only be instantiated
+
+The reference variable can be reassigned to other objects provided that it is not declared final. 
+The type of the reference variable would determine the methods that it can invoke on the object.
+
+Types of inheritance
+
+1) Single level
+
+2)Multilevel
+
+3)A very important fact to remember is that Java does not support multiple inheritance. 
+    This means that a class cannot extend more than one class. Therefore following 
+is illegal − 
+public class extends Animal, Mammal{}   
+However, a class can implement one or more interfaces,
+ which has helped Java get rid of the impossibility of multiple inheritance. 
+
+*A class can implement multiple interfaces
+
+*an interface can extend multiple interfaces
+
+4)Hierarchial inheritance
+

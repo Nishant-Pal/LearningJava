@@ -1,0 +1,19 @@
+
+The  differences are
+
+* 
+ static methods and static data elements can only be accessed inside a static method like 
+public static void main(Sting[] args)
+
+* if method or data element are to be accessed by obect of a class 
+no need to declare it static .Even if they are private or protected
+
+*if methods or data elements are to be accessed in a static method of the same class declare
+them static .
+
+*static means only on copy, final means value will not change.
+
+* When declaring class variables as public static final, then variable 
+  names (constants) are all in upper case. If the static variables are
+  not public and final,the naming syntax is the same as instance and
+  local variables. 
